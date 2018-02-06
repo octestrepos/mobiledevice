@@ -1,0 +1,38 @@
+/**
+* $HeadURL$
+* $LastChangedRevision$
+* $LastChangedDate$
+* $Author$
+* Created on 05.02.2018, 19:05:20
+* ===========================================================================
+* Copyright (c) 2006-2018 OrgaCard Siemantel & Alt GmbH. All rights reserved.
+*/
+
+package de.haruko.mobiledevice.service;
+
+import java.util.Set;
+import javax.ws.rs.core.Application;
+
+
+@javax.ws.rs.ApplicationPath("webresources")
+public class ApplicationConfig extends Application {
+
+    @Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> resources = new java.util.HashSet<>();
+        addRestResourceClasses(resources);
+        return resources;
+    }
+
+    /**
+     * Do not modify addRestResourceClasses() method.
+     * It is automatically populated with
+     * all resources defined in the project.
+     * If required, comment out calling this method in getClasses().
+     */
+    private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(de.haruko.mobiledevice.service.CleanrequestFacadeREST.class);
+        resources.add(de.haruko.mobiledevice.service.MobiledeviceFacadeREST.class);
+    }
+
+}
