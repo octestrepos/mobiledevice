@@ -19,8 +19,8 @@ import org.eclipse.persistence.sessions.factories.DescriptorCustomizer;
 public class DecentralcleaningCustomizer implements DescriptorCustomizer {
     @Override
     public void customize(ClassDescriptor descriptor) {
-        ExpressionBuilder centralCleaning = new ExpressionBuilder();
-        Expression expression = centralCleaning.getField("MDEV_ISBEDCENTER").equal((short)0).and(centralCleaning.getField("MDEV_ISCLEANINGDEVICE").equal((short)0));
+        ExpressionBuilder decentralCleaning = new ExpressionBuilder();
+        Expression expression = decentralCleaning.getField("MDEV_ISBEDCENTER").equal((short)0).and(decentralCleaning.getField("MDEV_ISCLEANINGDEVICE").equal((short)0));
         descriptor.getInheritancePolicy().setOnlyInstancesExpression(expression);
     }
 }

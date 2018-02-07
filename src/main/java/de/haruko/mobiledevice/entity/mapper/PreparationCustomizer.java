@@ -19,8 +19,8 @@ import org.eclipse.persistence.sessions.factories.DescriptorCustomizer;
 public class PreparationCustomizer implements DescriptorCustomizer {
     @Override
     public void customize(ClassDescriptor descriptor) {
-        ExpressionBuilder centralCleaning = new ExpressionBuilder();
-        Expression expression = centralCleaning.getField("MDEV_ISPREPARATION").equal((short)1);
+        ExpressionBuilder preparation = new ExpressionBuilder();
+        Expression expression = preparation.getField("MDEV_ISPREPARATIONDEVICE").equal((short)1);
         descriptor.getInheritancePolicy().setOnlyInstancesExpression(expression);
     }
 }

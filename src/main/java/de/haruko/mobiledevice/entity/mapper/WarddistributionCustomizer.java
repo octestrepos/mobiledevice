@@ -16,11 +16,14 @@ import org.eclipse.persistence.expressions.ExpressionBuilder;
 import org.eclipse.persistence.sessions.factories.DescriptorCustomizer;
 
 
-public class TransportationCustomizer implements DescriptorCustomizer {
+public class WarddistributionCustomizer implements DescriptorCustomizer {
     @Override
     public void customize(ClassDescriptor descriptor) {
-        ExpressionBuilder transportation = new ExpressionBuilder();
-        Expression expression = transportation.getField("MDEV_ISTRANSPORTDEVICE").equal((short)1);
+        ExpressionBuilder wardDistribution = new ExpressionBuilder();
+        Expression expression = wardDistribution.getField("MDEV_ISBEDCENTER").equal((short)0)
+                .and(wardDistribution.getField("MDEV_ISPREPARATIONDEVICE").equal((short)0))
+                .and(wardDistribution.getField("MDEV_ISTRANSPORTDEVICE").equal((short)0))
+                .and(wardDistribution.getField("MDEV_ISCLEANINGDEVICE").equal((short)0));
         descriptor.getInheritancePolicy().setOnlyInstancesExpression(expression);
     }
 }

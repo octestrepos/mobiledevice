@@ -20,7 +20,7 @@ public class CentralcleaningCustomizer implements DescriptorCustomizer {
     @Override
     public void customize(ClassDescriptor descriptor) {
         ExpressionBuilder centralCleaning = new ExpressionBuilder();
-        Expression expression = centralCleaning.getField("MDEV_ISBEDCENTER").equal((short)1).and(centralCleaning.getField("MDEV_ISPREPARATION").equal((short)0));
+        Expression expression = centralCleaning.getField("MDEV_ISBEDCENTER").equal((short)1).and(centralCleaning.getField("MDEV_ISPREPARATIONDEVICE").equal((short)0));
         descriptor.getInheritancePolicy().setOnlyInstancesExpression(expression);
     }
 }
