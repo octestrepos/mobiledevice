@@ -11,7 +11,7 @@
 package de.haruko.mobiledevice.orderadapter;
 
 
-public class TaskQueryCentralcleaningImpl implements TaskQuery {
+public class TaskQueryCentralcleaningImpl extends AbstractTaskQuery implements DeviceQuery {
 
     @Override
     public String getTaskCriteria() {
