@@ -24,7 +24,7 @@ public abstract class AbstractTaskQuery implements DeviceQuery {
         mainQuery += "      inner join WARDS w on (c.CLREQ_WARD_GUID = w.WARD_GUID) ";
         mainQuery += "      left outer join CLEANLOCATIONS l on (c.CLREQ_CLEANLOCATION_GUID = l.CLLOC_GUID) ";
         mainQuery += " where s.STATE_GUID IN ('0','1','2','3','4','5','6') ";
-        mainQuery += " and m.MDEV_GUID = ? ";          
+        mainQuery += " and m.MDEV_GUID = ?1 ";          
         return mainQuery;
     }        
 }

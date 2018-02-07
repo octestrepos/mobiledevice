@@ -31,7 +31,6 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(de.haruko.mobiledevice.service.CleanrequestFacadeREST.class);
         resources.add(de.haruko.mobiledevice.service.MobiledeviceFacadeREST.class);
     }
 

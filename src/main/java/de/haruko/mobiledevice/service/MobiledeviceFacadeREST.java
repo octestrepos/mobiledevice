@@ -11,14 +11,10 @@
 package de.haruko.mobiledevice.service;
 
 import de.haruko.mobiledevice.entity.Cleanrequest;
-import de.haruko.mobiledevice.entity.Decentralcleaningdevice;
 import de.haruko.mobiledevice.entity.IMobiledevice;
 import de.haruko.mobiledevice.entity.Mobiledevice;
-import de.haruko.mobiledevice.orderadapter.OrderQuery;
-import de.haruko.mobiledevice.orderadapter.OrderQueryAdapter;
 import java.util.List;
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
